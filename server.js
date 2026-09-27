@@ -19,7 +19,7 @@ app.use(cors({
 app.use(express.json());
 
 // Database connection
-connectDB().catch(err => console.log("DB Warning:", err.message));
+connectDB().catch(err => ("DB Warning:", err.message));
 
 // 2. Routes Mounting
 app.use('/api/auth', authRoutes);
@@ -32,5 +32,4 @@ app.get('/', (req, res) => {
 
 const PORT = process.env.PORT || 5000;
 app. listen(PORT, '0.0.0.0', () => {
-    console.log(`Server listening on port ${PORT}`);
 });

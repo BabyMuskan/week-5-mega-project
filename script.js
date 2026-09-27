@@ -1,4 +1,4 @@
-const API_BASE_URL = "https://week-4-mega-project-production-61cc.up.railway.app";
+const API_BASE_URL = week-4-mega-project-production-c8b9.up.railway.app
 
 // Pagination ke liye global variables
 let currentPage = 1;
@@ -112,7 +112,6 @@ async function loadDashboardData(page = 1, search = "") {
         }
 
         const result = await response.json();
-        console.log("Dashboard Data Loaded:", result);
 
         // Backend response se items aur totalPages nikalna
         const items = result.items || (Array.isArray(result) ? result : [result]);
@@ -201,8 +200,6 @@ function initDefaultChart(data) {
 document.addEventListener("DOMContentLoaded", function() {
     const token = localStorage.getItem("token");
     if (token) {
-        console.log("User already logged in, loading dashboard...");
-        loadDashboardData(1, "");
     }
 });
 // Pagination Buttons Event Listeners
